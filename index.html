@@ -159,7 +159,7 @@ document.getElementById('sendOrder').onclick=function(){
     let message="Commande LASTUPERIE74 :\n";
     cart.forEach(item=>{ message+=`${item.name} - ${item.quantity}g - ${item.price}€\n`; });
     message+="\nTotal: "+cart.reduce((s,i)=>s+i.price,0)+"€\nMerci !";
-    const telegramLink="https://t.me/tontelegram?text="+encodeURIComponent(message);
+    const telegramLink="https://t.me/Lastup74?text="+encodeURIComponent(message);
     const whatsappLink="https://wa.me/33000000000?text="+encodeURIComponent(message);
     window.open(telegramLink,"_blank") || window.open(whatsappLink,"_blank");
 }
